@@ -101,8 +101,11 @@ void loop()
   motors.setSpeeds(FORWARD_SPEED, FORWARD_SPEED);
   delay(500);
 
-  //stop
+  // stop
   motors.setSpeeds(0, 0);
+
+  // Wait until button click
+  button.waitForButton();
 }
 
 void turnDegrees(float deg, int _speed){
